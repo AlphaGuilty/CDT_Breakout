@@ -1,23 +1,34 @@
 # CDT_Breakout
-Taller de VideoJuegos
+## Taller de VideoJuegos
 
--Menu Inicio
--Importar objetos y texturas
--Movimiento de los objetos
--Buscar o Generar SFX
--Fisicas
+### Pipeline
 
--Implementar Pausa
--Implementar Power-Ups
+- Menu Inicio 
 
--Generar más Escenarios
--Generar alguna otra mini mecanica
+- Importar objetos y texturas
 
-Ideas de mapa:
+- Movimiento de los objetos
+
+- Buscar o Generar SFX
+
+- Fisicas
+
+
+- Implementar Pausa
+
+- Implementar Power-Ups
+
+
+- Generar más Escenarios
+
+- Generar alguna otra mini mecanica
+
+### Ideas de mapa:
 
 - Sin el techo, pero una segunda barra para el player 1
 
-Idea General:
+### Idea General:
 
--gravedad
--invertir controles
+- Gravedad
+
+- Invertir controles
