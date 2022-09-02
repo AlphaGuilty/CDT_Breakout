@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Fonts/GravityBold8.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Credits.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+outline_size = 5
+outline_color = Color( 0.0392157, 0.0196078, 0.0196078, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=5]
+default_font = SubResource( 4 )
+
+[node name="Credits" type="Node2D"]
+position = Vector2( 13, 41 )
+script = ExtResource( 2 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+margin_left = -10.0
+margin_top = -40.0
+margin_right = 583.0
+margin_bottom = 64.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+modulate = Color( 0.933333, 0.933333, 0.933333, 1 )
+show_behind_parent = true
+margin_top = 27.0
+margin_right = 593.0
+margin_bottom = 77.0
+theme = SubResource( 2 )
+text = "Credits"
+align = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+margin_left = 150.0
+margin_top = 231.0
+margin_right = 450.0
+margin_bottom = 506.0
+theme = SubResource( 5 )
+
+[node name="Back" type="Button" parent="VBoxContainer3"]
+margin_right = 300.0
+margin_bottom = 22.0
+text = "Back"
