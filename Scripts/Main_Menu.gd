@@ -14,7 +14,7 @@ func _ready():
 
 func _start_on_pressed():
 	get_tree().change_scene("res://Scene/Demo.tscn")
-	
+
 func _htp_on_pressed():
 	get_tree().change_scene("res://Scene/HowtoPlay.tscn")
 
