@@ -21,6 +21,7 @@ font_data = ExtResource( 1 )
 default_font = SubResource( 6 )
 
 [node name="Main_Menu" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 2 )
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]

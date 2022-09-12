@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Fonts/GravityBold8.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://resources/theme.tres" type="Theme" id=2]
+[ext_resource path="res://Scripts/pause.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="Pause" type="MarginContainer"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 167.0
+margin_top = 218.0
+margin_right = 432.0
+margin_bottom = 382.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 265.0
+margin_bottom = 60.0
+theme = ExtResource( 2 )
+theme_type_variation = "BigLabel"
+text = "Pause"
+align = 1
+valign = 2
+
+[node name="Continue" type="Button" parent="VBoxContainer"]
+margin_top = 64.0
+margin_right = 265.0
+margin_bottom = 86.0
+text = "Continue"
+
+[node name="Menu" type="Button" parent="VBoxContainer"]
+margin_top = 90.0
+margin_right = 265.0
+margin_bottom = 112.0
+text = "Main Menu"
+
+[node name="HtP" type="Button" parent="VBoxContainer"]
+margin_top = 116.0
+margin_right = 265.0
+margin_bottom = 138.0
+text = "How to play"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+pause_mode = 2
+margin_top = 142.0
+margin_right = 265.0
+margin_bottom = 164.0
+text = "Exit"
