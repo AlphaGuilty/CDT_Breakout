@@ -33,6 +33,7 @@ func on_how_pressed():
 	estado=false
 	get_tree().change_scene("res://Scene/HowToPlay.tscn")
 	
+	
 func on_exit_pressed():
 	get_tree().quit()
 
