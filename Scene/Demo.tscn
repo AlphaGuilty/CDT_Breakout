@@ -30,34 +30,47 @@ size_flags_vertical = 4
 
 [node name="Bar" parent="." instance=ExtResource( 2 )]
 position = Vector2( 300, 590 )
+collision_mask = 2
 
 [node name="Brick" parent="." instance=ExtResource( 5 )]
 position = Vector2( 301, 147 )
+collision_mask = 2
 
 [node name="Ball" parent="." instance=ExtResource( 3 )]
 position = Vector2( 362, 578 )
 physics_material_override = SubResource( 6 )
+contact_monitor = true
+
+[node name="ball_exit" type="VisibilityNotifier2D" parent="Ball"]
+pause_mode = 2
 
 [node name="wall left" type="StaticBody2D" parent="."]
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wall left"]
 position = Vector2( -9.5, 300 )
 shape = SubResource( 2 )
 
 [node name="wall right" type="StaticBody2D" parent="."]
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wall right"]
 position = Vector2( 609.5, 300 )
 shape = SubResource( 2 )
 
 [node name="celing" type="StaticBody2D" parent="."]
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="celing"]
 position = Vector2( 300, -10 )
 shape = SubResource( 3 )
 
 [node name="floor" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 0
 
 [node name="Death_Zone" type="CollisionShape2D" parent="floor"]
 position = Vector2( 300, 647 )
 shape = SubResource( 4 )
+
+[connection signal="screen_exited" from="Ball/ball_exit" to="Pause" method="_on_VisibilityNotifier2D_screen_exited"]

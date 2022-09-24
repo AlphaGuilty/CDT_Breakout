@@ -1,7 +1,6 @@
 extends Area2D
 
-var SPEED = 500
-
+var SPEED = 50
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -17,5 +16,4 @@ func _physics_process(delta):
 	
 func _on_body_entered(body: Node):
 	pass
-	
 	

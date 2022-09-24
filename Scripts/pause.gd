@@ -5,6 +5,8 @@ onready var menu = $VBoxContainer/Menu
 onready var how = $VBoxContainer/HtP
 onready var exit = $VBoxContainer/Exit
 
+var estado = true
+
 func _ready():
 	continu.connect("pressed",self,"on_continu_pressed")
 	menu.connect("pressed",self,"on_menu_pressed")
@@ -23,11 +25,18 @@ func on_continu_pressed():
 	
 func on_menu_pressed():
 	get_tree().paused=false
+	estado=false
 	get_tree().change_scene("res://Scene/Main_Menu.tscn")
 	
 func on_how_pressed():
 	get_tree().paused=false
+	estado=false
 	get_tree().change_scene("res://Scene/HowToPlay.tscn")
 	
 func on_exit_pressed():
 	get_tree().quit()
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	if estado:
+		get_tree().reload_current_scene()

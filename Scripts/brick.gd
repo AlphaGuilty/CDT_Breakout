@@ -14,3 +14,6 @@ func _physics_process(delta):
 	velocity.x = move_input * SPEED 
 	
 	velocity = move_and_slide(velocity, Vector2.UP)
+
+func _on_body_entered(body: Node):
+	pass
