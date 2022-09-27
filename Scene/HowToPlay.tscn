@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Fonts/GravityBold8.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/HowToPlay.gd" type="Script" id=2]
+[ext_resource path="res://resources/theme.tres" type="Theme" id=3]
+[ext_resource path="res://Assets/Textures/Key Assets/Keyboard Letters and Symbols.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -41,13 +43,87 @@ text = "How to Play"
 align = 1
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="."]
-margin_left = 150.0
-margin_top = 231.0
+margin_left = 153.0
+margin_top = 394.0
 margin_right = 450.0
 margin_bottom = 506.0
 theme = SubResource( 4 )
 
 [node name="Back" type="Button" parent="VBoxContainer3"]
-margin_right = 300.0
+margin_right = 297.0
 margin_bottom = 22.0
 text = "Back"
+
+[node name="J1" type="VBoxContainer" parent="."]
+margin_left = 47.0
+margin_top = 150.0
+margin_right = 237.0
+margin_bottom = 360.0
+
+[node name="Label" type="Label" parent="J1"]
+margin_right = 190.0
+margin_bottom = 20.0
+theme = ExtResource( 3 )
+theme_type_variation = "small"
+text = "Jugador 1"
+
+[node name="Sprite" type="Sprite" parent="J1"]
+position = Vector2( 51, 106 )
+scale = Vector2( 4.06, 2.85714 )
+texture = ExtResource( 4 )
+hframes = 8
+vframes = 14
+frame = 16
+
+[node name="Sprite2" type="Sprite" parent="J1"]
+position = Vector2( 133, 106 )
+scale = Vector2( 4.06, 2.85714 )
+texture = ExtResource( 4 )
+hframes = 8
+vframes = 14
+frame = 19
+
+[node name="J2" type="VBoxContainer" parent="."]
+margin_left = 358.0
+margin_top = 150.0
+margin_right = 549.0
+margin_bottom = 347.0
+theme = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="J2"]
+margin_right = 191.0
+margin_bottom = 20.0
+theme = ExtResource( 3 )
+theme_type_variation = "small"
+text = "Jugador 2"
+
+[node name="Sprite" type="Sprite" parent="J2"]
+position = Vector2( 71, 70 )
+scale = Vector2( 4.06, 2.85714 )
+texture = ExtResource( 4 )
+hframes = 8
+vframes = 14
+
+[node name="Sprite2" type="Sprite" parent="J2"]
+position = Vector2( 71, 106 )
+scale = Vector2( 4.06, 2.85714 )
+texture = ExtResource( 4 )
+hframes = 8
+vframes = 14
+frame = 1
+
+[node name="Sprite3" type="Sprite" parent="J2"]
+position = Vector2( 16, 106 )
+scale = Vector2( 4.06, 2.85714 )
+texture = ExtResource( 4 )
+hframes = 8
+vframes = 14
+frame = 2
+
+[node name="Sprite4" type="Sprite" parent="J2"]
+position = Vector2( 126, 106 )
+scale = Vector2( 4.06, 2.85714 )
+texture = ExtResource( 4 )
+hframes = 8
+vframes = 14
+frame = 3
