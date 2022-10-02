@@ -1,9 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
+[ext_resource path="res://Scripts/Demo.gd" type="Script" id=1]
 [ext_resource path="res://Scene/bar.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/ball.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/pause.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scene/brick.tscn" type="PackedScene" id=5]
 
 [sub_resource type="PhysicsMaterial" id=6]
 friction = 0.0
@@ -18,22 +18,23 @@ extents = Vector2( 319, 10 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 319, 47 )
 
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 316, 31 )
+
 [node name="Demo" type="Node2D"]
+script = ExtResource( 1 )
 
 [node name="Pause" parent="." instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 600.0
+margin_left = -1.0
+margin_right = 599.0
 margin_bottom = 600.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Bar" parent="." instance=ExtResource( 2 )]
 position = Vector2( 300, 590 )
-collision_mask = 2
-
-[node name="Brick" parent="." instance=ExtResource( 5 )]
-position = Vector2( 301, 147 )
 collision_mask = 2
 
 [node name="Ball" parent="." instance=ExtResource( 3 )]
@@ -72,5 +73,12 @@ collision_mask = 0
 [node name="Death_Zone" type="CollisionShape2D" parent="floor"]
 position = Vector2( 300, 647 )
 shape = SubResource( 4 )
+
+[node name="medium" type="StaticBody2D" parent="."]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="medium"]
+position = Vector2( 306, 332 )
+shape = SubResource( 7 )
 
 [connection signal="screen_exited" from="Ball/ball_exit" to="Pause" method="_on_VisibilityNotifier2D_screen_exited"]
