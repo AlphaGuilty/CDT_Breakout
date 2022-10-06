@@ -1,28 +1,22 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Scripts/Demo.gd" type="Script" id=1]
+[ext_resource path="res://Scene/bricks.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/bar.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/ball.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/pause.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/walls.tscn" type="PackedScene" id=5]
 
 [sub_resource type="PhysicsMaterial" id=6]
 friction = 0.0
 bounce = 1.0
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 9.5, 300 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 319, 10 )
-
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 319, 47 )
+extents = Vector2( 340, 50 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 316, 31 )
+extents = Vector2( 340, 30 )
 
 [node name="Demo" type="Node2D"]
-script = ExtResource( 1 )
 
 [node name="Pause" parent="." instance=ExtResource( 4 )]
 anchor_right = 0.0
@@ -37,6 +31,8 @@ size_flags_vertical = 4
 position = Vector2( 300, 590 )
 collision_mask = 2
 
+[node name="Bricks" parent="." instance=ExtResource( 1 )]
+
 [node name="Ball" parent="." instance=ExtResource( 3 )]
 position = Vector2( 362, 578 )
 physics_material_override = SubResource( 6 )
@@ -45,40 +41,21 @@ contact_monitor = true
 [node name="ball_exit" type="VisibilityNotifier2D" parent="Ball"]
 pause_mode = 2
 
-[node name="wall left" type="StaticBody2D" parent="."]
-collision_layer = 8
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall left"]
-position = Vector2( -9.5, 300 )
-shape = SubResource( 2 )
-
-[node name="wall right" type="StaticBody2D" parent="."]
-collision_layer = 8
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall right"]
-position = Vector2( 609.5, 300 )
-shape = SubResource( 2 )
-
-[node name="celing" type="StaticBody2D" parent="."]
-collision_layer = 8
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="celing"]
-position = Vector2( 300, -10 )
-shape = SubResource( 3 )
+[node name="Walls" parent="." instance=ExtResource( 5 )]
 
 [node name="floor" type="StaticBody2D" parent="."]
 collision_layer = 4
 collision_mask = 0
 
 [node name="Death_Zone" type="CollisionShape2D" parent="floor"]
-position = Vector2( 300, 647 )
+position = Vector2( 300, 650 )
 shape = SubResource( 4 )
 
 [node name="medium" type="StaticBody2D" parent="."]
 collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="medium"]
-position = Vector2( 306, 332 )
+position = Vector2( 300, 300 )
 shape = SubResource( 7 )
 
 [connection signal="screen_exited" from="Ball/ball_exit" to="Pause" method="_on_VisibilityNotifier2D_screen_exited"]
