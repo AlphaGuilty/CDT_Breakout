@@ -5,6 +5,9 @@ onready var menu = $VBoxContainer/Menu
 onready var how = $VBoxContainer/HtP
 onready var exit = $VBoxContainer/Exit
 
+onready var hud = $"../HUD"
+onready var ball = $"../Ball"
+
 var estado = true
 
 func _ready():
@@ -37,7 +40,10 @@ func on_how_pressed():
 func on_exit_pressed():
 	get_tree().quit()
 
-
 func _on_VisibilityNotifier2D_screen_exited():
 	if estado:
-		get_tree().reload_current_scene()
+		hud.lives-=1
+		if hud.lives==0:
+			get_tree().change_scene("res://Scene/game_over.tscn")
+		ball.set_linear_velocity(Vector2( 0, 0 ))
+		ball.position = ball.start_location
