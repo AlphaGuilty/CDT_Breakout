@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Scripts/Bricks.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/BRICKS.gd" type="Script" id=1]
 
 [node name="Bricks" type="KinematicBody2D"]
-script = ExtResource( 2 )
+script = ExtResource( 1 )
