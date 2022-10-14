@@ -9,6 +9,7 @@ func _ready():
 	pass # Replace with function body.
 	
 func _physics_process(delta):
+	position.y=590
 	var move_input = Input.get_axis("P1_move_left","P1_move_right")
 	
 	velocity.x = move_input * SPEED 

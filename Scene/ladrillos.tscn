@@ -2,5 +2,7 @@
 
 [ext_resource path="res://Scripts/BRICKS.gd" type="Script" id=1]
 
-[node name="Bricks" type="KinematicBody2D"]
+[node name="Node2D" type="KinematicBody2D"]
+collision_layer = 0
+collision_mask = 0
 script = ExtResource( 1 )

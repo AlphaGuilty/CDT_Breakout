@@ -85,10 +85,20 @@ P2_move_down={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="bola "
+2d_physics/layer_2="barra"
+2d_physics/layer_3="ladrillos"
+2d_physics/layer_4="pared_exterior"
+2d_physics/layer_5="pared_inferior"
+2d_physics/layer_6="pared_medio"
+
 [physics]
 
 common/enable_pause_aware_picking=true
 
 [rendering]
 
+2d/options/use_nvidia_rect_flicker_workaround=true
 environment/default_environment="res://default_env.tres"

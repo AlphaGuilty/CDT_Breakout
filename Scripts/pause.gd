@@ -20,8 +20,7 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("menu"):
 		visible= !visible
-		get_tree().paused=visible
-	
+		get_tree().paused=visible	
 func on_continu_pressed():
 	hide()
 	get_tree().paused=false
@@ -45,5 +44,4 @@ func _on_VisibilityNotifier2D_screen_exited():
 		hud.lives-=1
 		if hud.lives==0:
 			get_tree().change_scene("res://Scene/game_over.tscn")
-		ball.set_linear_velocity(Vector2( 0, 0 ))
 		ball.position = ball.start_location

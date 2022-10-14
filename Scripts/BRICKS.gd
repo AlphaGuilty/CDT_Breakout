@@ -1,24 +1,20 @@
 extends KinematicBody2D
 
-onready var BT=preload("res://Scene/brickTexture.tscn")
-onready var BC=preload("res://Scene/brickCollision.tscn")
+onready var BT=preload("res://Scene/brick.tscn")
 
 var velocity = Vector2()
 var SPEED = 500
 var ACCELERATION = 0
+var n=0
 
 func group():
-	var n=0
 	for i in range(2):
 		for j in range(3):
 			var bt=BT.instance()
-			var bc=BC.instance()
 			bt.name = "BrickTexture "+str(n)
-			bc.name = "BrickCollision "+str(n)
 			bt.position=Vector2(200+64*(j),100+32*(i))
-			bc.position=Vector2(200+64*(j),100+32*(i))
+			bt.get_script()
 			add_child(bt)
-			add_child(bc)
 			n+=1
 
 # Called when the node enters the scene tree for the first time.
