@@ -1,11 +1,11 @@
 extends KinematicBody2D
 
-# Called when the node enters the scene tree for the first time.
-var start_location
-export var SPEED = 500
-
 onready var lad=$"../ladrillos"
+
+export var SPEED = 500
+var start_location
 var direction=Vector2(0.5,1)
+
 func _ready():
 	start_location = position
 

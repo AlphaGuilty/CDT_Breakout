@@ -4,7 +4,6 @@ onready var continu = $VBoxContainer/Continue
 onready var menu = $VBoxContainer/Menu
 onready var how = $VBoxContainer/HtP
 onready var exit = $VBoxContainer/Exit
-
 onready var hud = $"../HUD"
 onready var ball = $"../Ball"
 

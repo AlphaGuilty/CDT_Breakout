@@ -22,12 +22,9 @@ func group():
 			add_child(S)
 			bt.name = str(k)
 			bt.position=Vector2(200+64*(j),100+32*(i))
-			bt.add_to_group("n")
 			add_child(bt)
-		
 			k+=1
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	group()
 
@@ -36,10 +33,8 @@ func _physics_process(delta):
 		var NAME="shape "+v
 		if (node.name==NAME):
 			node.queue_free()	
-	
 	var move_input_x = Input.get_axis("P2_move_left","P2_move_right")
 	var move_input_y = Input.get_axis("P2_move_up","P2_move_down")
-	
 	velocity.x = move_input_x * SPEED
 	velocity.y = move_input_y * SPEED
 	velocity=move_and_slide(velocity, Vector2.ZERO).normalized()
