@@ -15,15 +15,6 @@ extents = Vector2( 340, 30 )
 
 [node name="Demo" type="Node2D"]
 
-[node name="Pause" parent="." instance=ExtResource( 4 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -1.0
-margin_right = 599.0
-margin_bottom = 600.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
 [node name="Bar" parent="." instance=ExtResource( 2 )]
 position = Vector2( 300, 590 )
 collision_layer = 2
@@ -60,5 +51,14 @@ position = Vector2( 300, 300 )
 shape = SubResource( 7 )
 
 [node name="HUD" parent="." instance=ExtResource( 6 )]
+
+[node name="Pause" parent="." instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -1.0
+margin_right = 599.0
+margin_bottom = 600.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [connection signal="screen_exited" from="Ball/ball_exit" to="Pause" method="_on_VisibilityNotifier2D_screen_exited"]

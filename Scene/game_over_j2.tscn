@@ -51,7 +51,7 @@ margin_right = 356.0
 margin_bottom = 75.0
 theme = ExtResource( 1 )
 theme_type_variation = "BigLabel"
-text = "J1 Wins"
+text = "J2 Wins"
 align = 1
 valign = 2
 

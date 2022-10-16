@@ -15,7 +15,8 @@ func _physics_process(delta):
 	var collision=move_and_collide(velocity)
 	if collision !=null:
 		if collision.collider.collision_layer & 4:
-			var c=collision.get_instance_id()
+			var c=collision.collider.name
+			lad.v=c
 			collision.collider.hits()
 			lad.n-=1
 			if lad.n==0:
