@@ -7,7 +7,7 @@ onready var bola=preload("res://Scene/ball.tscn")
 var velocity = Vector2()
 var SPEED = 500
 var ACCELERATION = 0
-var n=6
+var n=12
 var v=""
 
 func group():
@@ -19,6 +19,7 @@ func group():
 			S.name= "shape "+str(k)
 			S.position=Vector2(200+64*(j),100+32*(i))
 			S.add_to_group("shapes")
+			S.set_meta("state",true)
 			add_child(S)
 			bt.name = str(k)
 			bt.position=Vector2(200+64*(j),100+32*(i))
@@ -32,7 +33,11 @@ func _physics_process(delta):
 	for node in get_tree().get_nodes_in_group("shapes"):
 		var NAME="shape "+v
 		if (node.name==NAME):
-			node.queue_free()	
+			if !node.get_meta("state"):
+				node.queue_free()	
+			else:
+				node.set_meta("state",false)
+			v=""
 	var move_input_x = Input.get_axis("P2_move_left","P2_move_right")
 	var move_input_y = Input.get_axis("P2_move_up","P2_move_down")
 	velocity.x = move_input_x * SPEED

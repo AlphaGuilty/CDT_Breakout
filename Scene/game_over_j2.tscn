@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://resources/theme.tres" type="Theme" id=1]
 [ext_resource path="res://Assets/Fonts/GravityBold8.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/game_over.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Textures/background/background.png" type="Texture" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 border_width_left = 10
@@ -29,6 +30,11 @@ custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
+
+[node name="Sprite" type="Sprite" parent="PanelContainer"]
+position = Vector2( 198, 302.5 )
+scale = Vector2( 1.01953, 1.02833 )
+texture = ExtResource( 4 )
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 margin_left = 10.0

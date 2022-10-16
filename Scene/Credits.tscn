@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Fonts/GravityBold8.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Credits.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Textures/background/background.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=3]
 size = 50
@@ -23,6 +24,11 @@ default_font = SubResource( 4 )
 [node name="Credits" type="Node2D"]
 position = Vector2( 13, 41 )
 script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 198, 302.5 )
+scale = Vector2( 1.01953, 1.02833 )
+texture = ExtResource( 3 )
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 margin_left = -10.0
