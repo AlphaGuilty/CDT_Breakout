@@ -5,6 +5,8 @@ onready var credit = $VBoxContainer/Creditos
 onready var htp = $VBoxContainer/HtP
 onready var exit = $VBoxContainer/Exit
 
+var start_sfx = 0 
+
 func _ready():
 	start.connect('pressed', self, "_start_on_pressed")
 	htp.connect('pressed', self, "_htp_on_pressed")

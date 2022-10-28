@@ -14,6 +14,7 @@ func _physics_process(delta):
 	var velocity=SPEED*direction*delta
 	var collision=move_and_collide(velocity)
 	if collision !=null:
+		$AudioStreamPlayer2D.play()
 		if collision.collider.collision_layer & 4:
 			var c=collision.collider.name
 			lad.v=c
