@@ -51,6 +51,5 @@ region_rect = Rect2( 108, 400, 12, 14 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Center"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Center/StaticBody2D"]
-visible = false
 position = Vector2( 6.00001, 7.875 )
 shape = SubResource( 1 )
