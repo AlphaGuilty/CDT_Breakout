@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Fonts/GravityBold8.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Credits.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Textures/background/background.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Sound/click.wav" type="AudioStream" id=4]
+[ext_resource path="res://resources/theme.tres" type="Theme" id=5]
 
 [sub_resource type="DynamicFont" id=3]
 size = 50
@@ -48,11 +49,47 @@ theme = SubResource( 2 )
 text = "Credits"
 align = 1
 
+[node name="VBoxContainer4" type="VBoxContainer" parent="."]
+margin_left = -10.0
+margin_top = 63.0
+margin_right = 583.0
+margin_bottom = 533.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer4"]
+modulate = Color( 0.933333, 0.933333, 0.933333, 1 )
+show_behind_parent = true
+margin_right = 593.0
+margin_bottom = 470.0
+theme = ExtResource( 5 )
+theme_type_variation = "small"
+custom_constants/line_spacing = 5
+text = "DEvelopers:
+
+Camilo urzua
+diego espinoza
+tomas secul
+
+itchio Assets:
+
+Basic Breakout Asset Pack 
+(joyrider3774)
+Pixel Keyboard Keys - for UI
+(Dream Mix)
+Breakout Assets
+(MegaCrash)
+
+sfx assets:
+
+-jsfxr (github)
+"
+align = 1
+
 [node name="VBoxContainer3" type="VBoxContainer" parent="."]
-margin_left = 150.0
-margin_top = 231.0
-margin_right = 450.0
-margin_bottom = 506.0
+margin_left = 154.0
+margin_top = 519.0
+margin_right = 454.0
+margin_bottom = 794.0
 theme = SubResource( 5 )
 
 [node name="Back" type="Button" parent="VBoxContainer3"]
