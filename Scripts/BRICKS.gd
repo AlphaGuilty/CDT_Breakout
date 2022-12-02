@@ -5,7 +5,7 @@ onready var s=preload("res://Scene/shape.tscn")
 onready var bola=preload("res://Scene/ball.tscn")
 
 var velocity = Vector2()
-var SPEED = 500
+var SPEED = 250
 var ACCELERATION = 0
 var n=12
 var v=""

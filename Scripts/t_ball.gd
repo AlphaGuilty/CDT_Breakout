@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 onready var lad=$"../ladrillos"
 
-export var SPEED = 200
+export var SPEED = 300
 var start_location
 var direction=Vector2(0.5,1)
 

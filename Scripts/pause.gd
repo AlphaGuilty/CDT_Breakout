@@ -41,7 +41,7 @@ func on_exit_pressed():
 func _on_VisibilityNotifier2D_screen_exited():
 	if estado:
 		hud.lives-=1
-		ball.SPEED = 200	
+		ball.SPEED = 300	
 		if hud.lives<=0:
 			get_tree().change_scene("res://Scene/game_over_j2.tscn")
 		ball.position = ball.start_location

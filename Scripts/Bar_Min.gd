@@ -11,15 +11,14 @@ func _physics_process(delta):
 
 func _on_body_entered(body: Node):
 	if body.has_method("bar_length"):
-		if power.estado=="small":
+		if power.estado=="big":
 			body.bar_length(10)
 			power.estado="normal"
 		else:
-			body.bar_length(14)
-			power.estado="big"
+			body.bar_length(6)
+			power.estado="small"
 	queue_free()
 
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
-
