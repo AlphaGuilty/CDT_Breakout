@@ -17,7 +17,7 @@ func _on_body_entered(body: Node):
 		else:
 			body.bar_length(14)
 			power.estado="big"
-	queue_free()
+		queue_free()
 
 
 func _on_VisibilityNotifier2D_screen_exited():
