@@ -43,3 +43,6 @@ func _physics_process(delta):
 	velocity.x = move_input_x * SPEED
 	velocity.y = move_input_y * SPEED
 	velocity=move_and_slide(velocity, Vector2.ZERO).normalized()
+
+func hits():
+	pass

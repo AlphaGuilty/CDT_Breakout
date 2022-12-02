@@ -34,7 +34,6 @@ region_rect = Rect2( 236, 400, 12, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Right"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Right/StaticBody2D"]
-visible = false
 polygon = PoolVector2Array( 0, 15.75, 0, 0, 10, 0, 10, 1.75, 12, 1.75, 12, 14, 10, 14, 10, 15.75 )
 __meta__ = {
 "_edit_group_": true
